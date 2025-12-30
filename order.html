@@ -85,6 +85,9 @@ nav ul li a {
     padding: 35px 15px;
     display: flex;
     justify-content: center;
+    margin-top: -40px; /* 🔥 ini kuncinya */
+    position: relative;
+    z-index: 10;
 }
 
 .form-box {
@@ -93,8 +96,9 @@ nav ul li a {
     border-radius: 18px;
     width: 100%;
     max-width: 500px;
-    box-shadow: 0 6px 22px rgba(0,0,0,.08);
+    box-shadow: 0 12px 35px rgba(0,0,0,.15);
 }
+
 
 .form-box h2 {
     text-align: center;
@@ -169,43 +173,77 @@ footer {
 </nav>
 
 <!-- HEADER -->
-<section class="header">
-    <h1>Form Pemesanan Wedding</h1>
-    <p>Isi data untuk konsultasi & pemesanan</p>
-</section>
-
-<!-- FORM -->
 <section class="form-section">
-    <div class="form-box">
-        <h2>Data Pemesanan</h2>
+<div class="form-box">
+    <h2>Data Pemesanan</h2>
 
-        <label>Nama Lengkap</label>
-        <input type="text" id="nama" placeholder="Nama Anda">
+    <label>Nama Lengkap</label>
+    <input type="text" id="nama" placeholder="Nama Anda">
 
-        <label>Nomor WhatsApp</label>
-        <input type="tel" id="wa" placeholder="08xxxxxxxxxx">
+    <label>Nomor WhatsApp</label>
+    <input type="tel" id="wa" placeholder="08xxxxxxxxxx">
 
-        <label>Tanggal Akad</label>
-        <input type="date" id="tanggal">
+    <label>Tanggal Akad</label>
+    <input type="date" id="tanggal">
 
-        <label>Pilih Paket</label>
-        <select id="paket">
-            <option>Paket silver khadijah</option>
-            <option>Paket gold khadijah</option>
-        </select>
-         <select id="paket">
-            <option>Paket silver Aisyah</option>
-            <option>Paket gold Aisyah</option>
-            <option>Paket platinum Aisyah</option>
-        </select>
-        <label>Catatan Tambahan</label>
-        <textarea id="catatan" placeholder="Contoh: lokasi acara, tema warna, dll"></textarea>
+    <label>Pilih Paket</label>
+    <select id="paket">
+        <option value="">-- Pilih Paket --</option>
 
-        <button class="btn-submit" onclick="kirimWA()">
-            Kirim Pesanan via WhatsApp
-        </button>
-    </div>
+        <optgroup label="Paket Khadijah">
+            <option value="Silver Khadijah">Silver Khadijah</option>
+            <option value="Gold Khadijah">Gold Khadijah</option>
+            <option value="Platinum Khadijah">Platinum Khadijah</option>
+        </optgroup>
+
+        <optgroup label="Paket Aisyah">
+            <option value="Silver Aisyah">Silver Aisyah</option>
+            <option value="Gold Aisyah">Gold Aisyah</option>
+            <option value="Platinum Aisyah">Platinum Aisyah</option>
+        </optgroup>
+
+        <optgroup label="Paket Fatimah">
+            <option value="Silver Fatimah">Silver Fatimah</option>
+            <option value="Gold Fatimah">Gold Fatimah</option>
+            <option value="Platinum Fatimah">Platinum Fatimah</option>
+        </optgroup>
+
+        <optgroup label="Paket Salamah">
+            <option value="Silver Salamah">Silver Salamah</option>
+            <option value="Gold Salamah">Gold Salamah</option>
+            <option value="Platinum Salamah">Platinum Salamah</option>
+        </optgroup>
+
+        <optgroup label="Paket Hafshah">
+            <option value="Silver Hafshah">Silver Hafshah</option>
+            <option value="Gold Hafshah">Gold Hafshah</option>
+            <option value="Platinum Hafshah">Platinum Hafshah</option>
+        </optgroup>
+
+        <optgroup label="Paket Shofiyah">
+            <option value="Silver Shofiyah">Silver Shofiyah</option>
+            <option value="Gold Shofiyah">Gold Shofiyah</option>
+            <option value="Platinum Shofiyah">Platinum Shofiyah</option>
+        </optgroup>
+
+        <optgroup label="Wedding Gedung">
+            <option value="Silver Wedding Gedung">Silver Wedding Gedung</option>
+            <option value="Gold Wedding Gedung">Gold Wedding Gedung</option>
+            <option value="Platinum Wedding Gedung">Platinum Wedding Gedung</option>
+        </optgroup>
+    </select>
+
+    <label>Catatan Tambahan</label>
+    <textarea id="catatan" placeholder="Lokasi, tema, dll"></textarea>
+
+    <button class="btn-submit" onclick="kirimWA()">
+        Kirim via WhatsApp
+    </button>
+</div>
 </section>
+
+
+
 
 <!-- FOOTER -->
 <footer>
