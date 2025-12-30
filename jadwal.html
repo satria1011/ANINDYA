@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kelola Jadwal Wedding</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #fdfbf6;
+    color: #333;
+}
+
+/* HEADER */
+.header {
+    background: linear-gradient(135deg, #bfa76f, #8c7b4a);
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.header h1 {
+    font-size: 34px;
+}
+
+.header p {
+    margin-top: 10px;
+    opacity: 0.9;
+}
+
+/* CONTENT */
+.container {
+    max-width: 900px;
+    margin: -50px auto 80px;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 18px;
+    padding: 35px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* FORM */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: #8c7b4a;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #6f633c;
+}
+
+/* BACK BUTTON */
+.back {
+    display: inline-block;
+    margin-top: 25px;
+    text-decoration: none;
+    color: #8c7b4a;
+    font-weight: 600;
+}
+
+.back i {
+    margin-right: 6px;
+}
+
+/* FOOTER */
+footer {
+    background: #8c7b4a;
+    color: white;
+    text-align: center;
+    padding: 18px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <h1>Kelola Jadwal Pernikahan</h1>
+    <p>Atur jadwal akad dan resepsi sesuai ketersediaan</p>
+</div>
+
+<div class="container">
+    <div class="card">
+
+        <form>
+            <div class="form-group">
+                <label>Tanggal Akad</label>
+                <input type="date" required>
+            </div>
+
+            <div class="form-group">
+                <label>Jam Akad</label>
+                <input type="time" required>
+            </div>
+
+            <div class="form-group">
+                <label>Tanggal Resepsi</label>
+                <input type="date">
+            </div>
+
+            <div class="form-group">
+                <label>Lokasi Acara</label>
+                <input type="text" placeholder="Contoh: Gedung Serbaguna" required>
+            </div>
+
+            <button type="submit">
+                <i class="fa-solid fa-calendar-check"></i> Simpan Jadwal
+            </button>
+        </form>
+
+        <a href="menu.html" class="back">
+            <i class="fa-solid fa-arrow-left"></i> Kembali ke Menu
+        </a>
+
+    </div>
+</div>
+
+<footer>
+    © 2026 Wedding Syar'i
+</footer>
+
+</body>
+</html>
